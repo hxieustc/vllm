@@ -1,0 +1,60 @@
+{
+  "kv_connector": "KVCRDirectGuardConnector",
+  "kv_role": "kv_both",
+  "kv_load_failure_policy": "recompute",
+  "kv_connector_extra_config": {
+    "spec_name": "KVCRDirectGuardSpec",
+    "cpu_bytes_to_use": 0,
+    "guard_pool_bytes": 133143986176,
+    "router_hint_block_size": 256,
+    "self_describing_kv_events": true,
+    "guard_only_sources": true,
+    "guard_only_source_proof": true,
+    "opportunistic_query": false,
+    "secondary_tiers": [
+      {
+        "type": "kvcr",
+        "router_capabilities": [
+          "router_hint"
+        ],
+        "control_ports": [
+          17771,
+          17772,
+          17773,
+          17774,
+          17775,
+          17776,
+          17777,
+          17778
+        ],
+        "control_advertise_host": "127.0.0.1",
+        "guard_only_sources": true,
+        "guard_only_source_proof": true,
+        "opportunistic_query": false
+      }
+    ],
+    "router_capabilities": [
+      "router_hint"
+    ],
+    "control_host": "0.0.0.0",
+    "control_ports": [
+      17771,
+      17772,
+      17773,
+      17774,
+      17775,
+      17776,
+      17777,
+      17778
+    ],
+    "control_advertise_host": "127.0.0.1",
+    "operation_timeout_ms": 5000,
+    "abandon_timeout_ms": 10000,
+    "enable_telemetry": true,
+    "guard_socket_path": "/run/kvcr/memory.sock",
+    "compatibility_digest": "dsv4-dspark-fp8-mxfp4-bs256-direct-guard-v1",
+    "metadata_max_keys_per_request": 524288,
+    "metadata_query_batch_keys": 32768,
+    "metadata_inventory_gate": true
+  }
+}
