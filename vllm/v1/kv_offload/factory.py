@@ -67,3 +67,10 @@ OffloadingSpecFactory.register_spec(
     "vllm.v1.kv_offload.tiering.spec",
     "TieringOffloadingSpec",
 )
+
+
+OffloadingSpecFactory.register_spec(
+    "KVCRDirectGuardSpec",
+    "vllm.distributed.kv_transfer.kv_connector.v1.kvcr.guard_direct.spec",
+    "KVCRDirectGuardSpec",
+)
